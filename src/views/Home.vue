@@ -2,7 +2,7 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <h3>Search, Find, and Rate Your Professors.</h3>
-    <img src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211" alt="">
+    <img src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211" alt="" />
     <a href="/professors" class="professor-buttons">Find Your Professor</a>
     <a href="/professors" class="rate-buttons">Rate Your Professor</a>
   </div>
@@ -66,12 +66,12 @@ img {
 
 <script>
 export default {
-  data: function () {
+  data: function() {
     return {
-      message: "RateMyProfessor",
+      message: "RateMyProfessor-Clone",
     };
   },
-  created: function () {},
+  created: function() {},
   methods: {},
 };
 </script>
