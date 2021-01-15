@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import ProfessorsIndex from "../views/ProfessorsIndex.vue";
 import ProfessorsShow from "../views/ProfessorsShow.vue";
 
 Vue.use(VueRouter);
@@ -12,6 +13,9 @@ const routes = [
     component: Home,
   },
   {
+    path: "/professors",
+    name: "professors-index",
+    component: ProfessorsIndex,
     path: "/professors/:id",
     name: "professors-show",
     component: ProfessorsShow,

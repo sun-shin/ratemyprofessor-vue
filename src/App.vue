@@ -18,12 +18,14 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
+  background: black;
+  border-radius: 20px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
 #nav a.router-link-exact-active {
