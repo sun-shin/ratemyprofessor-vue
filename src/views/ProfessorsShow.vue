@@ -1,16 +1,22 @@
 <template>
-  <div class="professors-show">
-    <h1>{{ professor[0].name }}</h1>
-    <h3>University: {{ professor[0].university }}</h3>
-    <h3>Department: {{ professor[0].department }}</h3>
-
+  <div class="professors-show" v-if="professor">
+    <h1>{{ professor.name }}</h1>
+    <h3>University: {{ professor.university }}</h3>
+    <h3>Department: {{ professor.department }}</h3>
     <h3>Reviews</h3>
-    <div v-for="review in professor[0].reviews">
-      <h3>{{ review.title }}</h3>
+    <p>
+      <router-link :to="`/reviews/new`"
+        >Rate Professor {{ professor.name }}</router-link
+      >
+    </p>
+
+    <div v-for="review in professor.reviews">
+      <h4>{{ review.title }}</h4>
       <p>Course Code: {{ review.course_code }}</p>
       <p>Review: {{ review.review }}</p>
       <p>Rating: {{ review.rating }}</p>
       <p id="date">Posted {{ formatDate(review.created_at) }}</p>
+      <br />
     </div>
   </div>
 </template>
@@ -28,7 +34,7 @@ import moment from "moment";
 export default {
   data: function() {
     return {
-      professor: {},
+      professor: null,
     };
   },
   created: function() {
