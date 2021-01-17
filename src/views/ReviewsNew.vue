@@ -7,7 +7,7 @@
       </ul>
       <div class="form-group">
         <label>Professor ID:</label>
-        <input type="text" class="form-control" v-model="professorId" />
+        <input type="number" class="form-control" v-model="professorId" />
       </div>
       <div class="form-group">
         <label>Course Code:</label>
@@ -28,7 +28,7 @@
       </div>
       <div class="form-group">
         <label>Rating:</label>
-        <input type="integer" class="form-control" v-model="rating" />
+        <input type="number" class="form-control" v-model="rating" />
       </div>
       <br />
       <input type="submit" class="btn btn-primary" value="Submit" />
