@@ -18,6 +18,8 @@ const routes = [
     path: "/professors",
     name: "professors-index",
     component: ProfessorsIndex,
+  },
+  {
     path: "/professors/:id",
     name: "professors-show",
     component: ProfessorsShow,
@@ -26,6 +28,8 @@ const routes = [
     path: "/reviews/new",
     name: "reviews-new",
     component: ReviewsNew,
+  },
+  {
     path: "/reviews/:id/edit",
     name: "reviews-edit",
     component: ReviewsEdit,

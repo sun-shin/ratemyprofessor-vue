@@ -1,6 +1,13 @@
 <template>
-  <div class="about">
-    <h1>All Professors</h1>
+  <div class="professors-index">
+    <div v-for="professor in professors">
+      <h4>{{ professor.name }}</h4>
+      <p>University: {{ professor.university }}</p>
+      <p>Department: {{ professor.department }}</p>
+      <p>Rating:</p>
+      <router-link :to="`/professors/${professor.id}`">More Info</router-link
+      ><br />
+    </div>
   </div>
 </template>
 
@@ -8,11 +15,21 @@
 import axios from "axios";
 
 export default {
-  data: function () {
+  data: function() {
     return {
       professors: [],
     };
   },
-  created: function () {},
+  created: function() {
+    this.indexProfessors();
+  },
+  methods: {
+    indexProfessors: function() {
+      axios.get("/professors").then((response) => {
+        console.log(response.data);
+        this.professors = response.data;
+      });
+    },
+  },
 };
 </script>
