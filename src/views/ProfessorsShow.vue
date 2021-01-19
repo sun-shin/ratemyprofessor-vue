@@ -1,14 +1,17 @@
 <template>
   <div class="professors-show" v-if="professor">
-    <h1>{{ professor.name }}</h1>
-    <h3>University: {{ professor.university }}</h3>
-    <h3>Department: {{ professor.department }}</h3>
-    <h3>Reviews</h3>
-    <p>
-      <router-link :to="`/reviews/new`"
-        >Rate Professor {{ professor.name }}</router-link
-      >
-    </p>
+    <div>
+      <h1>{{ professor.name }}</h1>
+      <h3>University: {{ professor.university }}</h3>
+      <h3>Department: {{ professor.department }}</h3>
+      <h3>Reviews</h3>
+      <p>
+        <router-link :to="`/reviews/new`"
+          >Rate Professor {{ professor.name }}</router-link
+        >
+      </p>
+    </div>
+    <br />
 
     <div v-for="review in professor.reviews">
       <h4>{{ review.title }}</h4>
@@ -16,6 +19,9 @@
       <p>Review: {{ review.review }}</p>
       <p>Rating: {{ review.rating }}</p>
       <p id="date">Posted {{ formatDate(review.created_at) }}</p>
+      <router-link :to="`/reviews/${review.id}/edit`">
+        <p>Edit</p>
+      </router-link>
       <br />
     </div>
   </div>
