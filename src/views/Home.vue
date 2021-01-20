@@ -2,9 +2,12 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <h3>Search, Find, and Rate Your Professors.</h3>
-    <img src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211" alt="" />
+    <img
+      src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211"
+      alt=""
+    />
     <a href="/professors" class="professor-buttons">Find Your Professor</a>
-    <a href="/professors" class="rate-buttons">Rate Your Professor</a>
+    <a href="/professors/new" class="new-prof-buttons">Add New Professor</a>
   </div>
 </template>
 
@@ -43,7 +46,7 @@ img {
   bottom: 130px;
 }
 
-.rate-buttons {
+.new-prof-buttons {
   color: white;
   font-size: 25px;
   background: black;
@@ -57,7 +60,7 @@ img {
   right: 400px;
 }
 
-.rate-buttons:hover {
+.new-prof-buttons:hover {
   background: rgb(44, 44, 44);
   position: absolute;
   bottom: 130px;
