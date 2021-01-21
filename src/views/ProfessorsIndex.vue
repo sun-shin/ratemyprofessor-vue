@@ -4,7 +4,7 @@
       <h4>{{ professor.name }}</h4>
       <p>University: {{ professor.university }}</p>
       <p>Department: {{ professor.department }}</p>
-      <p>Rating:</p>
+      <p>Rating: {{ avgRating(professor.reviews) }}/5</p>
       <router-link :to="`/professors/${professor.id}`">More Info</router-link
       ><br />
     </div>
@@ -29,6 +29,18 @@ export default {
         console.log(response.data);
         this.professors = response.data;
       });
+    },
+    avgRating: function(reviews) {
+      var sum = 0;
+      for (var i = 0; i < reviews.length; i++) {
+        sum += parseInt(reviews[i].rating);
+      }
+      var avg = sum / reviews.length;
+      if (isNaN(avg)) {
+        return "No ratings yet!";
+      }
+      var a = avg.toFixed(1);
+      return a;
     },
   },
 };

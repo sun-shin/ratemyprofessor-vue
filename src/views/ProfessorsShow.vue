@@ -7,6 +7,7 @@
       >
       <h3>University: {{ professor.university }}</h3>
       <h3>Department: {{ professor.department }}</h3>
+      <h3>Rating: {{ avgRating(professor.reviews) }}</h3>
       <h3>Reviews</h3>
       <p>
         <router-link :to="`/reviews/new`"
@@ -56,6 +57,18 @@ export default {
   methods: {
     formatDate: function(date) {
       return moment(date).format("LLL");
+    },
+    avgRating: function(reviews) {
+      var sum = 0;
+      for (var i = 0; i < reviews.length; i++) {
+        sum += parseInt(reviews[i].rating);
+      }
+      var avg = sum / reviews.length;
+      if (isNaN(avg)) {
+        return "No ratings yet!";
+      }
+      var a = avg.toFixed(1);
+      return a;
     },
   },
 };
