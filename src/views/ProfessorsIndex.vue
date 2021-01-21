@@ -1,6 +1,16 @@
 <template>
   <div class="professors-index">
-    <div v-for="professor in professors">
+    <div>
+      Search Professors: <input type="text" v-model="professorSearch" />
+    </div>
+    <div
+      v-for="professor in filterBy(
+        professors,
+        professorSearch,
+        'name',
+        'university'
+      )"
+    >
       <h4>{{ professor.name }}</h4>
       <p>University: {{ professor.university }}</p>
       <p>Department: {{ professor.department }}</p>
@@ -13,11 +23,14 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       professors: [],
+      professorSearch: "",
     };
   },
   created: function() {
