@@ -2,6 +2,9 @@
   <div class="professors-show" v-if="professor">
     <div>
       <h1>{{ professor.name }}</h1>
+      <router-link :to="`/professors/${this.professor.id}/edit`"
+        >Edit Professor</router-link
+      >
       <h3>University: {{ professor.university }}</h3>
       <h3>Department: {{ professor.department }}</h3>
       <h3>Reviews</h3>
