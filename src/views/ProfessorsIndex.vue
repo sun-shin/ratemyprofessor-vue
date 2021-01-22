@@ -1,6 +1,7 @@
 <template>
   <div class="professors-index">
     <div>
+      <br />
       Search Professors: <input type="text" v-model="professorSearch" />
     </div>
     <div
@@ -11,12 +12,15 @@
         'university'
       )"
     >
-      <h4>{{ professor.name }}</h4>
+      <h4>
+        <router-link :to="`/professors/${professor.id}`">{{
+          professor.name
+        }}</router-link>
+      </h4>
       <p>University: {{ professor.university }}</p>
       <p>Department: {{ professor.department }}</p>
-      <p>Rating: {{ avgRating(professor.reviews) }}/5</p>
-      <router-link :to="`/professors/${professor.id}`">More Info</router-link
-      ><br />
+      <p>Rating: {{ avgRating(professor.reviews) }}</p>
+      <br />
     </div>
   </div>
 </template>
@@ -48,12 +52,12 @@ export default {
       for (var i = 0; i < reviews.length; i++) {
         sum += parseInt(reviews[i].rating);
       }
-      var avg = sum / reviews.length;
+      var avg = (sum / reviews.length).toFixed(1);
       if (isNaN(avg)) {
         return "No ratings yet!";
       }
-      var a = avg.toFixed(1);
-      return a;
+      var result = avg + "/5.0";
+      return result;
     },
   },
 };

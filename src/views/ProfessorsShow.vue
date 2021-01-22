@@ -10,7 +10,7 @@
       <h3>Rating: {{ avgRating(professor.reviews) }}</h3>
       <h3>Reviews</h3>
       <p>
-        <router-link :to="`/reviews/new`"
+        <router-link :to="`/professors/${this.professor.id}/review-new`"
           >Rate Professor {{ professor.name }}</router-link
         >
       </p>
