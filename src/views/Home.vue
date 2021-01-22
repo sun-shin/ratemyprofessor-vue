@@ -7,7 +7,7 @@
       alt=""
     />
     <a href="/professors" class="professor-buttons">Find Your Professor</a>
-    <a href="/professors/new" class="new-prof-buttons">Add New Professor</a>
+    <a href="/professor/new" class="new-prof-buttons">Add New Professor</a>
   </div>
 </template>
 
