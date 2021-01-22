@@ -7,14 +7,6 @@
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul>
       <div class="form-group">
-        <label>Professor ID:</label>
-        <input
-          type="number"
-          class="form-control"
-          v-model="review.professor_id"
-        />
-      </div>
-      <div class="form-group">
         <label>Course Code:</label>
         <input type="text" class="form-control" v-model="review.course_code" />
       </div>
@@ -73,7 +65,7 @@ export default {
       if (confirm("Are you sure you want to delete this review?")) {
         axios.delete(`/reviews/${this.review.id}`).then((response) => {
           console.log("Review Successfully Deleted", response.data);
-          this.$router.push(`/professors/${this.professor_id}`);
+          this.$router.push(`/professors/${this.review.professor_id}`);
         });
       }
     },

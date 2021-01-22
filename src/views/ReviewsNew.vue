@@ -1,14 +1,10 @@
 <template>
   <div class="reviews-new">
-    <h1>Rate Professor</h1>
+    <h1>Rate Professor {{ professor.name }}</h1>
     <form v-on:submit.prevent="createReview()">
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul>
-      <div class="form-group">
-        <label>Professor ID:</label>
-        <input type="number" class="form-control" v-model="professorId" />
-      </div>
       <div class="form-group">
         <label>Course Code:</label>
         <input type="text" class="form-control" v-model="courseCode" />
@@ -50,27 +46,32 @@ export default {
     return {
       professor: {},
       errors: [],
-      professorId: "",
       title: "",
       courseCode: "",
       review: "",
       rating: "",
     };
   },
-  created: function() {},
+  created: function() {
+    console.log(this.$route.params.id);
+    axios.get(`/professors/${this.$route.params.id}`).then((response) => {
+      console.log(response.data);
+      this.professor = response.data;
+    });
+  },
   methods: {
     createReview: function() {
       var params = {
-        professor_id: this.professorId,
+        professor_id: this.professor.id,
         title: this.title,
         course_code: this.courseCode,
         review: this.review,
         rating: this.rating,
       };
       axios
-        .post("/reviews", params)
+        .post(`/professors/${this.professor.id}/review-new`, params)
         .then((response) => {
-          this.$router.push(`/professors/${this.professorId}`);
+          this.$router.push(`/professors/${this.professor.id}`);
         })
         .catch((error) => {
           this.error = error.response.data.errors;
