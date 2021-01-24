@@ -1,71 +1,146 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <h3>Search, Find, and Rate Your Professors.</h3>
-    <img
-      src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211"
-      alt=""
-    />
-    <a href="/professors" class="professor-buttons">Find Your Professor</a>
-    <a href="/professor/new" class="new-prof-buttons">Add New Professor</a>
+    <section class="main-slider">
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background: url(img/showcase-1.jpg)">
+            <div class="slider-text">
+              <div class="inner">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1>Welcome to RateMyInstructor</h1>
+                      <p>
+                        Quisque ligulas ipsum, euismod atras vulputate iltricies
+                        etri elit. Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="background: url(img/showcase-2.jpg)">
+            <div class="slider-text">
+              <div class="inner">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1>Fully responsive Template</h1>
+                      <p>
+                        Quisque ligulas ipsum, euismod atras vulputate iltricies
+                        etri elit.Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="background: url(img/showcase-3.jpg)">
+            <div class="slider-text">
+              <div class="inner">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1><b>Flexible</b> Minimal Business</h1>
+                      <p>
+                        Quisque ligulas ipsum, euismod atras vulputate iltricies
+                        etri elit.Lorem ipsum dolor sit amet, consectetur.
+                      </p>
+                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="divide40"></div>
+    <div class="divide80"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-desktop"></i> Responsive Design</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-image"></i> Parallax Background</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-keyboard-o"></i> Easy to Customize</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+      </div>
+      <!--row-->
+      <div class="divide40"></div>
+      <div class="row">
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-thumbs-o-up"></i> 24/7 Dedicated Support</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-flag"></i> Font Awesome Icons</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+        <div class="col-md-4 margin20">
+          <div class="service-box wow animated fadeInLeft">
+            <h4><i class="fa fa-text-height"></i> Google Fonts</h4>
+            <p>
+              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
+              elit. Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <!--service box-->
+        </div>
+        <!--service-col-->
+      </div>
+    </div>
+    <!--services -->
   </div>
 </template>
 
-<style>
-h3 {
-  font-size: 30px;
-  position: relative;
-  bottom: -40px;
-  padding-bottom: 20px;
-  font-weight: 100;
-}
-
-img {
-  margin: 0 auto;
-  position: relative;
-  right: 1px;
-  width: 20%;
-}
-
-.professor-buttons {
-  color: black;
-  font-size: 25px;
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: 8px;
-  margin: 20px;
-  position: absolute;
-  bottom: 120px;
-  left: 450px;
-}
-
-.professor-buttons:hover {
-  background: rgb(235, 232, 232);
-  position: absolute;
-  bottom: 130px;
-}
-
-.new-prof-buttons {
-  color: white;
-  font-size: 25px;
-  background: black;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 30px;
-  padding: 8px;
-  margin: 20px;
-  position: absolute;
-  bottom: 120px;
-  right: 400px;
-}
-
-.new-prof-buttons:hover {
-  background: rgb(44, 44, 44);
-  position: absolute;
-  bottom: 130px;
-}
-</style>
+<style></style>
 
 <script>
 export default {
