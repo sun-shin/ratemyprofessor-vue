@@ -92,6 +92,141 @@
     </div>
     <!--.navbar-default-->
     <router-view />
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 margin30">
+            <div class="footer-col">
+              <h3 class="heading">About us</h3>
+              <p>
+                Duis nisl est, porta eu augue et, tempor congue mauris. Praesent
+                a ligula in urna consectetur rhoncus.
+              </p>
+              <ul class="address-info list-unstyled">
+                <li>
+                  <i class="fa fa-home"></i> Vaishali nagar, Jaipur, 302012
+                </li>
+                <li><i class="fa fa-phone"></i> +91 123456789</li>
+                <li>
+                  <i class="fa fa-envelope"></i>
+                  <a href="#">support@designmylife.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 margin30">
+            <div class="footer-col">
+              <h3 class="heading">Recent Post</h3>
+              <ul class="list-unstyled popular-post">
+                <li>
+                  <div class="popular-img">
+                    <a href="#">
+                      <img src="img/work-6.png" class="img-responsive" alt=""
+                    /></a>
+                  </div>
+                  <div class="popular-desc">
+                    <h5><a href="#">blog post image</a></h5>
+                    <h6>31st july 2014</h6>
+                  </div>
+                </li>
+                <li>
+                  <div class="popular-img">
+                    <a href="#">
+                      <img src="img/work-2.png" class="img-responsive" alt=""
+                    /></a>
+                  </div>
+                  <div class="popular-desc">
+                    <h5><a href="#">blog post image</a></h5>
+                    <h6>31st july 2014</h6>
+                  </div>
+                </li>
+                <li>
+                  <div class="popular-img">
+                    <a href="#">
+                      <img src="img/work-5.png" class="img-responsive" alt=""
+                    /></a>
+                  </div>
+                  <div class="popular-desc">
+                    <h5><a href="#">blog post image</a></h5>
+                    <h6>31st july 2014</h6>
+                  </div>
+                </li>
+              </ul>
+              <!--latest post-->
+            </div>
+          </div>
+          <!--footer col-->
+          <div class="col-md-4 margin30">
+            <div class="footer-col">
+              <h3 class="heading">Elsewhere</h3>
+              <ul class="list-inline social-1">
+                <li>
+                  <a href="https://linkedin.com/in/sunhanshin"
+                    ><i
+                      class="fa fa-linkedin"
+                      data-toggle="tooltip"
+                      title=""
+                      data-original-title="LinkedIn"
+                      data-placement="top"
+                    ></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/sun-shin"
+                    ><i
+                      class="fa fa-github"
+                      data-toggle="tooltip"
+                      title=""
+                      data-original-title="Github"
+                      data-placement="top"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="divide30"></div>
+            <div class="footer-col">
+              <h3 class="heading">Newsletter</h3>
+              <p>
+                Duis nisl est, porta eu augue et, tempor congue mauris.
+              </p>
+              <form class="newsletter-form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="input-group">
+                      <label class="sr-only" for="subscribe-email"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="subscribe-email"
+                        placeholder="Enter your email"
+                      />
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn btn-theme-bg btn-lg">
+                          OK
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--footer col-->
+        </div>
+        <!--row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-btm">
+              <span>&copy; Sun Shin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
   </div>
 </template>
 

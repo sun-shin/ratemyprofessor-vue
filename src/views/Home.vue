@@ -3,54 +3,56 @@
     <section class="main-slider">
       <div class="flexslider">
         <ul class="slides">
-          <li style="background: url(img/showcase-1.jpg)">
+          <li class="img" style="background: url(/img/bg_1.jpeg)">
             <div class="slider-text">
               <div class="inner">
                 <div class="container text-center">
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1>Welcome to RateMyInstructor</h1>
-                      <p>
-                        Quisque ligulas ipsum, euismod atras vulputate iltricies
-                        etri elit. Lorem ipsum dolor sit amet, consectetur.
-                      </p>
-                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                      <h1 id="text">Welcome to RateMyInstructor</h1>
+                      <p id="text">
+                        RateMyInstructor is a platform for students to leave
+                        reviews for their instructors
+                      </p id="text">
+                      <a href="/professors" class="btn btn-lg border-white">See Professors</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li style="background: url(img/showcase-2.jpg)">
+          <li style="background: url(/img/bg_2.jpeg)">
             <div class="slider-text">
               <div class="inner">
                 <div class="container text-center">
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1>Fully responsive Template</h1>
-                      <p>
-                        Quisque ligulas ipsum, euismod atras vulputate iltricies
-                        etri elit.Lorem ipsum dolor sit amet, consectetur.
+                      <h1 id="text">Welcome to RateMyInstructor</h1>
+                      <p id="text">
+                        This application is a clone of a website called
+                        RateMyProfessor which has similar functionality as this
+                        clone.
                       </p>
-                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                      <a href="/professors" class="btn btn-lg border-white">See Professors</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li style="background: url(img/showcase-3.jpg)">
+          <li style="background: url(/img/bg_3.jpeg)">
             <div class="slider-text">
               <div class="inner">
                 <div class="container text-center">
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <h1><b>Flexible</b> Minimal Business</h1>
-                      <p>
-                        Quisque ligulas ipsum, euismod atras vulputate iltricies
-                        etri elit.Lorem ipsum dolor sit amet, consectetur.
+                      <h1 id="text">Welcome to RateMyInstructor</h1>
+                      <p id="text">
+                        The main desire behind this application was to apply new
+                        knowledge in Node.js, Express.js, Vue.js as well as
+                        PostgreSQL technologies.
                       </p>
-                      <a href="#" class="btn btn-lg border-white">Learn More</a>
+                      <a href="/" class="btn btn-lg border-white">See Professors</a>
                     </div>
                   </div>
                 </div>
@@ -61,38 +63,19 @@
       </div>
     </section>
     <div class="divide40"></div>
-    <div class="divide80"></div>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 margin20">
+        <h3>Technologies:</h3>
+        <div class="col-md-6 margin20">
           <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-desktop"></i> Responsive Design</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
+           <img src="/img/node_icon.png" style="width:140px;height:55px;">
           </div>
           <!--service box-->
         </div>
         <!--service-col-->
-        <div class="col-md-4 margin20">
+        <div class="col-md-6 margin20">
           <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-image"></i> Parallax Background</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-        <div class="col-md-4 margin20">
-          <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-keyboard-o"></i> Easy to Customize</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
+            <img src="/img/express_icon.png" style="width:155px;height:50px;"><br>
           </div>
           <!--service box-->
         </div>
@@ -101,35 +84,16 @@
       <!--row-->
       <div class="divide40"></div>
       <div class="row">
-        <div class="col-md-4 margin20">
+        <div class="col-md-6 margin20">
           <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-thumbs-o-up"></i> 24/7 Dedicated Support</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
+            <img src="/img/vue_icon.png" style="width:60px;height:50px;">
           </div>
           <!--service box-->
         </div>
         <!--service-col-->
-        <div class="col-md-4 margin20">
+        <div class="col-md-6 margin20">
           <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-flag"></i> Font Awesome Icons</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-        <div class="col-md-4 margin20">
-          <div class="service-box wow animated fadeInLeft">
-            <h4><i class="fa fa-text-height"></i> Google Fonts</h4>
-            <p>
-              Quisque ligulas ipsum, euismod atras vulputate iltricies etri
-              elit. Lorem ipsum dolor sit amet, consectetur.
-            </p>
+            <img src="/img/psql_icon.png" style="width:65px;height:65px;">
           </div>
           <!--service box-->
         </div>
@@ -140,7 +104,14 @@
   </div>
 </template>
 
-<style></style>
+<style>
+#img {
+  opacity: 0.5;
+}
+#text {
+  text-shadow: 2px 2px #000000;
+}
+</style>
 
 <script>
 export default {

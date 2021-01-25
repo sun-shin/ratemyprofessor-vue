@@ -25,6 +25,10 @@
             <div class="col-md-12">
               <div class="blog-wrap">
                 <div class="blog-desc">
+                  <img
+                    src="/img/prof_icon.png"
+                    style="float:right;width:200px;height:200px;"
+                  />
                   <h4>
                     {{ professor.name }}
                   </h4>
