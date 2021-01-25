@@ -1,26 +1,52 @@
 <template>
   <div class="professors-index">
-    <div>
-      <br />
-      Search Professors: <input type="text" v-model="professorSearch" />
-    </div>
-    <div
-      v-for="professor in filterBy(
-        professors,
-        professorSearch,
-        'name',
-        'university'
-      )"
-    >
-      <h4>
-        <router-link :to="`/professors/${professor.id}`">{{
-          professor.name
-        }}</router-link>
-      </h4>
-      <p>University: {{ professor.university }}</p>
-      <p>Department: {{ professor.department }}</p>
-      <p>Rating: {{ avgRating(professor.reviews) }}</p>
-      <br />
+    <div class="container">
+      <div>
+        <br />
+        Search Professors: <input type="text" v-model="professorSearch" />
+      </div>
+      <br /><br />
+      <div class="col-md-12">
+        <span class="border">
+          <div
+            class="col-sm-4 margin20"
+            v-for="professor in filterBy(
+              professors,
+              professorSearch,
+              'name',
+              'university'
+            )"
+          >
+            <h4>
+              <router-link :to="`/professors/${professor.id}`">{{
+                professor.name
+              }}</router-link>
+            </h4>
+            <p>University: {{ professor.university }}</p>
+            <p>Department: {{ professor.department }}</p>
+            <p>Rating: {{ avgRating(professor.reviews) }}</p>
+            <br />
+          </div>
+        </span>
+      </div>
+      <!-- <div
+        v-for="professor in filterBy(
+          professors,
+          professorSearch,
+          'name',
+          'university'
+        )"
+      >
+        <h4>
+          <router-link :to="`/professors/${professor.id}`">{{
+            professor.name
+          }}</router-link>
+        </h4>
+        <p>University: {{ professor.university }}</p>
+        <p>Department: {{ professor.department }}</p>
+        <p>Rating: {{ avgRating(professor.reviews) }}</p>
+        <br />
+      </div> -->
     </div>
   </div>
 </template>
