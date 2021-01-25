@@ -1,40 +1,43 @@
 <template>
-  <div class="reviews-new">
-    <h1>Rate Professor {{ professor.name }}</h1>
-    <form v-on:submit.prevent="createReview()">
-      <ul>
-        <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul>
-      <div class="form-group">
-        <label>Course Code:</label>
-        <input type="text" class="form-control" v-model="courseCode" />
-      </div>
-      <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="form-control" v-model="title" />
-      </div>
-      <div class="form-group">
-        <label>Review:</label>
-        <input
-          type="text"
-          class="form-control"
-          id="reviewtxtarea"
-          v-model="review"
-        />
-      </div>
-      <div class="form-group">
-        <label>Rating:</label>
-        <input type="number" class="form-control" v-model="rating" />
-      </div>
-      <br />
-      <input type="submit" class="btn btn-primary" value="Submit" />
-    </form>
+  <div class="container">
+    <div class="divide50"></div>
+    <div class="reviews-new">
+      <h2>Rate Professor {{ professor.name }}</h2>
+      <form v-on:submit.prevent="createReview()">
+        <ul>
+          <li class="text-danger" v-for="error in errors">{{ error }}</li>
+        </ul>
+        <div class="form-group">
+          <label>Course Code:</label>
+          <input type="text" class="form-control" v-model="courseCode" />
+        </div>
+        <div class="form-group">
+          <label>Title:</label>
+          <input type="text" class="form-control" v-model="title" />
+        </div>
+        <div class="form-group">
+          <label>Review:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="reviewtxtarea"
+            v-model="review"
+          />
+        </div>
+        <div class="form-group">
+          <label>Rating:</label>
+          <input type="number" class="form-control" v-model="rating" />
+        </div>
+        <br />
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+    </div>
+    <div class="divide50"></div>
   </div>
 </template>
 
 <style>
 #reviewtxtarea {
-  width: 500px;
   height: 100px;
 }
 </style>

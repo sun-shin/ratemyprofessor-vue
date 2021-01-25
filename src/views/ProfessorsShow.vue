@@ -17,7 +17,7 @@
       </div>
     </section>
     <!--.bread-wrap-->
-    <div class="divide80"></div>
+    <div class="divide50"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-12 margin30">
@@ -28,6 +28,9 @@
                   <h4>
                     {{ professor.name }}
                   </h4>
+                  <router-link :to="`/professors/${this.professor.id}/edit`"
+                    ><i class="fa fa-pencil"></i
+                  ></router-link>
                   <br />
                   <p>
                     {{ professor.university }}
@@ -82,6 +85,9 @@
 #date {
   color: rgb(91, 90, 90);
   font-size: small;
+}
+.icon {
+  position: relative;
 }
 </style>
 

@@ -1,30 +1,44 @@
 <template>
-  <div class="reviews-edit">
-    <h1>Edit Review</h1>
+  <div class="container">
+    <div class="divide50"></div>
+    <div class="reviews-edit">
+      <h2>Edit Review</h2>
 
-    <form v-on:submit.prevent="updateReview()">
-      <ul>
-        <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul>
-      <div class="form-group">
-        <label>Course Code:</label>
-        <input type="text" class="form-control" v-model="review.course_code" />
-      </div>
-      <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="form-control" v-model="review.title" />
-      </div>
-      <div class="form-group">
-        <label>Review:</label>
-        <input type="text" class="form-control" v-model="review.review" />
-      </div>
-      <div class="form-group">
-        <label>Rating:</label>
-        <input type="number" class="form-control" v-model="review.rating" />
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit" />
-    </form>
-    <button v-on:click="destroyReview()">Delete Review</button>
+      <form v-on:submit.prevent="updateReview()">
+        <ul>
+          <li class="text-danger" v-for="error in errors">{{ error }}</li>
+        </ul>
+        <div class="form-group">
+          <label>Course Code:</label>
+          <input
+            type="text"
+            class="form-control"
+            v-model="review.course_code"
+          />
+        </div>
+        <div class="form-group">
+          <label>Title:</label>
+          <input type="text" class="form-control" v-model="review.title" />
+        </div>
+        <div class="form-group">
+          <label>Review:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="reviewtxtarea"
+            v-model="review.review"
+          />
+        </div>
+        <div class="form-group">
+          <label>Rating:</label>
+          <input type="number" class="form-control" v-model="review.rating" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+      <br />
+      <button v-on:click="destroyReview()">Delete Review</button>
+    </div>
+    <div class="divide50"></div>
   </div>
 </template>
 
