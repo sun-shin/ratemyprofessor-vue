@@ -103,13 +103,11 @@
                 a ligula in urna consectetur rhoncus.
               </p>
               <ul class="address-info list-unstyled">
-                <li>
-                  <i class="fa fa-home"></i> Vaishali nagar, Jaipur, 302012
-                </li>
-                <li><i class="fa fa-phone"></i> +91 123456789</li>
+                <li><i class="fa fa-home"></i> Chicago, Illinois, 60616</li>
+                <li><i class="fa fa-phone"></i> +1 123456789</li>
                 <li>
                   <i class="fa fa-envelope"></i>
-                  <a href="#">support@designmylife.com</a>
+                  <a href="#">example@email.com</a>
                 </li>
               </ul>
             </div>
