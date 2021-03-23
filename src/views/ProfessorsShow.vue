@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="professors-show" v-if="professor">
     <section class="bread-wrap">
       <div class="container">
@@ -92,6 +92,10 @@
 }
 .icon {
   position: relative;
+}
+#router-link{
+  display: inline-block; 
+  width: 100px;
 }
 </style>
 
