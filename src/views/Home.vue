@@ -1,115 +1,69 @@
 <template>
   <div class="home">
-    <section class="main-slider">
-      <div class="flexslider">
-        <ul class="slides">
-          <li class="img" style="background: url(/img/bg_1.jpeg)">
-            <div class="slider-text">
-              <div class="inner">
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h1 id="text">Welcome to RateMyInstructor</h1>
-                      <p id="text">
-                        RateMyInstructor is a platform for students to leave
-                        reviews for their instructors
-                      </p id="text">
-                      <a href="/professors" class="btn btn-lg border-white">See Professors</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li style="background: url(/img/bg_2.jpeg)">
-            <div class="slider-text">
-              <div class="inner">
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h1 id="text">Welcome to RateMyInstructor</h1>
-                      <p id="text">
-                        This application is a clone of a website called
-                        RateMyProfessor which has similar functionality as this
-                        clone.
-                      </p>
-                      <a href="/professors" class="btn btn-lg border-white">See Professors</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li style="background: url(/img/bg_3.jpeg)">
-            <div class="slider-text">
-              <div class="inner">
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h1 id="text">Welcome to RateMyInstructor</h1>
-                      <p id="text">
-                        The main desire behind this application was to apply new
-                        knowledge in Node.js, Express.js, Vue.js as well as
-                        PostgreSQL technologies.
-                      </p>
-                      <a href="/" class="btn btn-lg border-white">See Professors</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <div class="divide40"></div>
-    <div class="container">
-      <div class="row">
-        <h3>Technologies:</h3>
-        <div class="col-md-6 margin20">
-          <div class="service-box wow animated fadeInLeft">
-           <img src="/img/node_icon.png" style="width:140px;height:55px;">
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-        <div class="col-md-6 margin20">
-          <div class="service-box wow animated fadeInLeft">
-            <img src="/img/express_icon.png" style="width:155px;height:50px;"><br>
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-      </div>
-      <!--row-->
-      <div class="divide40"></div>
-      <div class="row">
-        <div class="col-md-6 margin20">
-          <div class="service-box wow animated fadeInLeft">
-            <img src="/img/vue_icon.png" style="width:60px;height:50px;">
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-        <div class="col-md-6 margin20">
-          <div class="service-box wow animated fadeInLeft">
-            <img src="/img/psql_icon.png" style="width:65px;height:65px;">
-          </div>
-          <!--service box-->
-        </div>
-        <!--service-col-->
-      </div>
-    </div>
-    <!--services -->
+    <h1>{{ message }}</h1>
+    <h3>Search, Find, and Rate Your Professors.</h3>
+     <img
+      src="https://cdn.shopify.com/s/files/1/0917/4492/products/ARLO-4550_gold_G_600x.jpg?v=1537926211"
+      alt=""
+    />
+    <a href="/professors" class="index-button">Search Professors</a>
+    <a href="/professor/new" class="new-button">Add New Professor</a>
   </div>
 </template>
 
 <style>
-#img {
-  opacity: 0.5;
+h1 {
+  color:white;
 }
-#text {
-  text-shadow: 2px 2px #000000;
+h3 {
+  color: white;
+  font-size: 30px;
+  position: relative;
+  bottom: -40px;
+  padding-bottom: 20px;
+  font-weight: 100;
+}
+img {
+  margin: 0 auto;
+  position: relative;
+  right: 1px;
+  width: 20%;
+}
+.index-button {
+  color: white;
+  font-size: 25px;
+  background: black;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 20px;
+  position: absolute;
+  bottom: 120px;
+  left: 450px;
+}
+.index-button:hover {
+  background: rgb(44, 44, 44);
+  position: absolute;
+  bottom: 130px;
+}
+.new-button {
+  color: white;
+  font-size: 25px;
+  background: black;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 20px;
+  position: absolute;
+  bottom: 120px;
+  right: 400px;
+}
+.new-button:hover {
+  background: rgb(44, 44, 44);
+  position: absolute;
+  bottom: 130px;
 }
 </style>
 
@@ -117,7 +71,7 @@
 export default {
   data: function() {
     return {
-      message: "RateMyProfessor-Clone",
+      message: "RateMyInstructor",
     };
   },
   created: function() {},
