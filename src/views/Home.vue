@@ -3,16 +3,15 @@
     <h1>RateMyInstructor</h1>
     <h3>Search, Find, and Rate Your Professors</h3>
     <a href="/professors" class="index-button">Search Professors</a>
-    <!-- <span v-if="$parent.loggedin()"> -->
       <a href="/professor/new" class="new-button">Add New Professor</a>
-    <!-- </span> -->
   </div>
 </template>
 
 <style>
 h1 {
   color:white;
-  font-size: 60px;
+  font-size: 80px;
+  padding-top: 100px;
 }
 h3 {
   color: white;

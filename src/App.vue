@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="background">
-      <!-- <img src="/img/chalkboard.jpeg" class="stretch"> -->
+      <img src="/img/chalkboard.jpeg" class="stretch">
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
