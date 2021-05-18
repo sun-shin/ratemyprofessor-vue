@@ -1,18 +1,49 @@
 <template>
   <div id="app">
-    <!-- <div id="background">
-      <img src="/img/chalkboard.jpeg" class="stretch">
-    </div> -->
+    <div id="background">
+      <!-- <img src="/img/chalkboard.jpeg" class="stretch"> -->
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/professors">Professors</router-link> |
-      <router-link to="/professor/new">Add Professor</router-link> |
+      <span v-if="!loggedIn()">
+        <router-link to="/signup">Signup</router-link> |
+      </span>
+      <span v-if="!loggedIn()">
+        <router-link to="/login">Login</router-link> |
+      </span>
+      <span v-if="loggedIn()">
+        <router-link to="/logout">Sign Out</router-link>
+      </span>
     </div>
     <div class="container">
       <router-view />
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+
+export default {
+  data: function() {
+    return {};
+  },
+  methods: {
+    loggedIn: function() {
+      return localStorage.getItem("jwt");
+    },
+    // getUserId: function() {
+    //   return localStorage.getItem("user_id");
+    // },
+    logout: function() {
+      delete axios.defaults.headers.common["Authorization"];
+      localStorage.removeItem("jwt");
+      this.$router.push("/");
+    },
+  },
+};
+</script>
 
 <style>
 #app {
@@ -47,3 +78,6 @@
   color: #42b983;
 }
 </style>
+
+
+
