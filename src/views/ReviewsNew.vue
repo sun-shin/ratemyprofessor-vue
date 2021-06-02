@@ -33,7 +33,7 @@
 </template>
 
 <style>
-#reviewtxtarea {
+.input {
   width: 500px;
   height: 100px;
 }
