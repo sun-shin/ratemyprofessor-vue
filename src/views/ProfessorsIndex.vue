@@ -29,7 +29,7 @@
             </template>
             <p>University: {{ professor.university }}</p>
             <p>Department: {{ professor.department }}</p>
-            <p>Rating: {{ avgRating(professor.reviews) }}</p>
+            <p>{{ avgRating(professor.reviews) }}</p>
           </b-card><br>
         </div>
       </b-row>

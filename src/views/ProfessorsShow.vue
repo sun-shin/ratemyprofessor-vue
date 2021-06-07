@@ -6,16 +6,18 @@
         >Edit Professor</router-link
         color: "white"
       >
+     
       <h3>University: {{ professor.university }}</h3>
       <h3>Department: {{ professor.department }}</h3>
-      <h3>Rating: {{ avgRating(professor.reviews) }}</h3><br><br>
-      <span>
+      <h3>Rating: {{ avgRating(professor.reviews) }}</h3><br>
+      <br><br><br>
+       <h4>
         <router-link  
         v-if="$parent.loggedIn()"
         :to="`/professors/${this.professor.id}/review-new`"
           >Rate Professor {{ professor.name }}</router-link
         >
-      </span>
+      </h4>
     </div><br><br>
 
   <b-container class="content">

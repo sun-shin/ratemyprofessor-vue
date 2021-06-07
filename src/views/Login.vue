@@ -46,10 +46,10 @@ export default {
       axios
         .post("/sessions", params)
         .then(response => {
-          axios.defaults.headers.common["Authorization"] =
-            response.data;
-          localStorage.setItem("jwt", response.data);
-          // localStorage.setItem("id", )
+          axios.defaults.headers.common["authorization"] =
+            response.data.token;
+          localStorage.setItem("jwt", response.data.token);
+          localStorage.setItem("user_id", response.data.user_id);
           this.$router.push("/professors");
         })
         .catch(error => {
