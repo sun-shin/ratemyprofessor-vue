@@ -2,19 +2,17 @@
   <div class="signup">
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
-      <ul>
+      <ul><br>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
           {{ error }}
         </li>
       </ul>
       <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email">
-      </div>
+        <input type="email" class="form-control" v-model="email" placeholder="Email">
+      </div><br>
       <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password">
-      </div>
+        <input type="password" class="form-control" v-model="password" placeholder="Password">
+      </div><br>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
   </div>

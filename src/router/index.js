@@ -9,7 +9,6 @@ import ProfessorsShow from "../views/ProfessorsShow.vue";
 import ProfessorsNew from "../views/ProfessorsNew.vue";
 import ProfessorsEdit from "../views/ProfessorsEdit.vue";
 import ReviewsNew from "../views/ReviewsNew.vue";
-import ReviewsEdit from "../views/ReviewsEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -58,12 +57,7 @@ const routes = [
     path: "/professors/:id/review-new",
     name: "reviews-new",
     component: ReviewsNew,
-  },
-  {
-    path: "/reviews/:id/edit",
-    name: "reviews-edit",
-    component: ReviewsEdit,
-  },
+  }
 ];
 
 const router = new VueRouter({

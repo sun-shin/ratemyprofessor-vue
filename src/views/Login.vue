@@ -3,7 +3,7 @@
   <div class="login">
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
-      <ul>
+      <ul><br>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
           {{ error }}
         </li>
@@ -13,7 +13,7 @@
       </div><br>
       <div class="form-group">
         <input type="password" class="form-control" v-model="password" placeholder="Password">
-      </div>
+      </div><br>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
   </div>

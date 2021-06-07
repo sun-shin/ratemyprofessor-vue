@@ -4,30 +4,42 @@
       <h1>{{ professor.name }}</h1>
       <router-link :to="`/professors/${this.professor.id}/edit`"
         >Edit Professor</router-link
+        color: "white"
       >
       <h3>University: {{ professor.university }}</h3>
       <h3>Department: {{ professor.department }}</h3>
-      <h3>Rating: {{ avgRating(professor.reviews) }}</h3>
-      <h3>Reviews</h3>
-      <p>
-        <router-link :to="`/professors/${this.professor.id}/review-new`"
+      <h3>Rating: {{ avgRating(professor.reviews) }}</h3><br><br>
+      <span>
+        <router-link  
+        v-if="$parent.loggedIn()"
+        :to="`/professors/${this.professor.id}/review-new`"
           >Rate Professor {{ professor.name }}</router-link
         >
-      </p>
-    </div>
-    <br />
+      </span>
+    </div><br><br>
 
-    <div v-for="review in professor.reviews">
-      <h4>{{ review.title }}</h4>
-      <p>Course Code: {{ review.course_code }}</p>
-      <p>Review: {{ review.review }}</p>
-      <p>Rating: {{ review.rating }}</p>
-      <p id="date">Posted {{ formatDate(review.created_at) }}</p>
-      <router-link :to="`/reviews/${review.id}/edit`">
-        <p>Edit</p>
-      </router-link>
-      <br />
-    </div>
+  <b-container class="content">
+    <b-row>
+      <div class="col-sm-4"
+        v-for="review in professor.reviews"
+      >
+      <b-card
+        border-variant="warning"
+        header-tag="header"
+        header-bg-variant="transparent"
+        align="center"
+      >
+        <template #header>
+        <h4>{{ review.title }}</h4>
+        </template>
+        <p>{{ review.course_code }}</p>
+        <p>{{ review.review }}</p>
+        <p>Rating: {{ review.rating }}</p>
+        <p id="date">Posted {{ formatDate(review.created_at) }}</p>
+      </b-card><br>
+      </div>
+    </b-row>
+  </b-container>
   </div>
 </template>
 
@@ -35,6 +47,10 @@
 #date {
   color: rgb(91, 90, 90);
   font-size: small;
+}
+a {
+  font-weight: bold;
+  color: #fff
 }
 </style>
 
