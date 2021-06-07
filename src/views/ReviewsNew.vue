@@ -7,7 +7,7 @@
       </ul>
       <div class="form-group">
         <label>Course Code:</label>
-        <input type="text" class="form-control" v-model="courseCode" />
+        <input type="text" class="form-control" v-model="courseCode"/>
       </div>
       <div class="form-group">
         <label>Title:</label>
@@ -33,7 +33,7 @@
 </template>
 
 <style>
-.input {
+#reviewtxtarea {
   width: 500px;
   height: 100px;
 }
