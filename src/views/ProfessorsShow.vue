@@ -2,17 +2,48 @@
   <div class="professors-show" v-if="professor">
     <div>
       <h1>{{ professor.name }}</h1>
-      <router-link :to="`/professors/${this.professor.id}/edit`"
-        >Edit Professor</router-link
-        color: "white"
-      >
+      <div id="professorUpdateModal">
+        <b-button v-b-modal.update-prof>Update Professor</b-button>
+
+        <b-modal id="update-prof" hide-footer title="Update Professor Information">
+          <form v-on:submit.prevent="updateProfessor()">
+            <ul>
+              <li class="text-danger" v-for="error in errors">{{ error }}</li>
+            </ul>
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" v-model="professor.name" />
+            </div>
+            <div class="form-group">
+              <label>University:</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="professor.university"
+              />
+            </div>
+            <div class="form-group">
+              <label>Department:</label>
+              <input
+                type="text"
+                class="form-control"
+                v-model="professor.department"
+              />
+            </div>
+            <br />
+            <div class="submitButton">
+               <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+          </form>
+        </b-modal>
+      </div>
      
       <h3>University: {{ professor.university }}</h3>
       <h3>Department: {{ professor.department }}</h3>
       <h3>Score: {{ avgRating(professor.reviews) }}</h3><br>
       <br><br><br>
-      <div>
-        <b-button v-b-modal.modal-1
+      <div id="reviewCreateModal">
+        <b-button variant="warning" v-b-modal.modal-1
         v-if="$parent.loggedIn()"
         >
           Rate Professor {{ professor.name }}
@@ -21,7 +52,7 @@
         <b-modal 
         id="modal-1" 
         hide-footer
-        title="New Review">
+        title="Create Review">
           <form v-on:submit.prevent="createReview()">
             <ul>
               <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -198,6 +229,21 @@ export default {
           this.error = error.response.data.errors;
         });
     },
+    updateProfessor: function() {
+      var params = {
+        name: this.professor.name,
+        university: this.professor.university,
+        department: this.professor.department,
+      };
+      axios
+        .put(`/professors/${this.professor.id}`, params)
+        .then((response) => {
+          this.$router.push(`/professors/${this.professor.id}`);
+        })
+        .catch((error) => {
+          this.errors = error.response.data.errors;
+        });
+    }
   },
 };
 </script>
