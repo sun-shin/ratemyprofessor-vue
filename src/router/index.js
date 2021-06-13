@@ -8,7 +8,6 @@ import ProfessorsIndex from "../views/ProfessorsIndex.vue";
 import ProfessorsShow from "../views/ProfessorsShow.vue";
 import ProfessorsNew from "../views/ProfessorsNew.vue";
 import ProfessorsEdit from "../views/ProfessorsEdit.vue";
-import ReviewsNew from "../views/ReviewsNew.vue";
 
 Vue.use(VueRouter);
 
@@ -53,11 +52,6 @@ const routes = [
     name: "professors-edit",
     component: ProfessorsEdit,
   },
-  {
-    path: "/professors/:id/review-new",
-    name: "reviews-new",
-    component: ReviewsNew,
-  }
 ];
 
 const router = new VueRouter({

@@ -30,7 +30,6 @@
       <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
     <br />
-    <button v-on:click="destroyProfessor()">Delete Professor</button>
   </div>
 </template>
 
@@ -64,15 +63,7 @@ export default {
         .catch((error) => {
           this.errors = error.response.data.errors;
         });
-    },
-    destroyProfessor: function() {
-      if (confirm("Are you sure you want to delete this professor?")) {
-        axios.delete(`/professors/${this.professor.id}`).then((response) => {
-          console.log("Professor Successfully Deleted", response.data);
-          this.$router.push(`/professors/${this.professor.id}`);
-        });
-      }
-    },
+    }
   },
 };
 </script>
