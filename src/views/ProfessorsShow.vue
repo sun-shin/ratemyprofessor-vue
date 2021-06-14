@@ -3,9 +3,18 @@
     <div>
       <h1>{{ professor.name }}</h1>
       <div id="professorUpdateModal">
-        <b-button v-b-modal.update-prof>Update Professor</b-button>
+        <b-button 
+        v-b-modal.update-prof
+        v-if="$parent.loggedIn()"
+        >
+          Update Professor
+        </b-button>
 
-        <b-modal id="update-prof" hide-footer title="Update Professor Information">
+        <b-modal 
+        id="update-prof"
+        ref="prof-update-modal" 
+        hide-footer 
+        title="Update Professor Information">
           <form v-on:submit.prevent="updateProfessor()">
             <ul>
               <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -32,7 +41,7 @@
             </div>
             <br />
             <div class="submitButton">
-               <input type="submit" class="btn btn-primary" value="Submit" />
+               <input type="submit" class="btn btn-primary" value="Submit"/>
             </div>
           </form>
         </b-modal>
@@ -42,7 +51,7 @@
       <h3>Department: {{ professor.department }}</h3>
       <h3>Score: {{ avgRating(professor.reviews) }}</h3><br>
       <br><br><br>
-      <div id="reviewCreateModal">
+      <div id="reviewNewModal">
         <b-button variant="warning" v-b-modal.modal-1
         v-if="$parent.loggedIn()"
         >
@@ -51,8 +60,9 @@
 
         <b-modal 
         id="modal-1" 
+        ref="review-new-modal"
         hide-footer
-        title="Create Review">
+        title="New Review">
           <form v-on:submit.prevent="createReview()">
             <ul>
               <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -93,7 +103,7 @@
               />
             </div><br />
             <div class="submitButton">
-               <input type="submit" class="btn btn-primary" value="Submit" />
+               <input type="submit" class="btn btn-primary" value="Submit"/>
             </div>
           </form>
         </b-modal>
@@ -223,7 +233,8 @@ export default {
       axios
         .post(`/professors/${this.professor.id}/review-new`, params)
         .then((response) => {
-          this.$router.push(`/professors/${this.professor.id}`);
+          this.$refs['review-new-modal'].hide()
+          location.reload();
         })
         .catch((error) => {
           this.error = error.response.data.errors;
@@ -238,7 +249,7 @@ export default {
       axios
         .put(`/professors/${this.professor.id}`, params)
         .then((response) => {
-          this.$router.push(`/professors/${this.professor.id}`);
+          this.$refs['prof-update-modal'].hide();
         })
         .catch((error) => {
           this.errors = error.response.data.errors;

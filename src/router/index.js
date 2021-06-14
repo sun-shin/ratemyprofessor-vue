@@ -6,7 +6,6 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import ProfessorsIndex from "../views/ProfessorsIndex.vue";
 import ProfessorsShow from "../views/ProfessorsShow.vue";
-import ProfessorsNew from "../views/ProfessorsNew.vue";
 
 Vue.use(VueRouter);
 
@@ -41,11 +40,6 @@ const routes = [
     name: "professors-show",
     component: ProfessorsShow,
   },
-  {
-    path: "/professor/new",
-    name: "professors-new",
-    component: ProfessorsNew,
-  }
 ];
 
 const router = new VueRouter({
