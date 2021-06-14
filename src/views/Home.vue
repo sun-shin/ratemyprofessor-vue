@@ -3,7 +3,7 @@
     <h1>RateMyInstructor</h1>
     <h3>Search, Find, and Rate Your Professors</h3>
     <a href="/professors" class="index-button">Search Professors</a>
-      <a href="/professor/new" class="new-button">Add New Professor</a>
+      <a href="/login" class="new-button">Add New Professor</a>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 h1 {
   color:white;
   font-size: 80px;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 h3 {
   color: white;

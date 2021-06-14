@@ -16,7 +16,13 @@
         <router-link to="/logout">Sign Out</router-link>
       </span>
     </div>
-    <div class="container">
+    <div
+    class="guestCredentials" 
+    v-if="!loggedIn()"
+    >
+      <p>Email: guest@email.com</p>
+      <p>Password: guestpass </p>
+    </div>
       <router-view />
     </div>
   </div>
@@ -76,6 +82,13 @@ export default {
 }
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.guestCredentials {
+  color:white;
+  float: left;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 </style>
 
