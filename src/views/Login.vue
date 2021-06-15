@@ -46,7 +46,7 @@ export default {
       axios
         .post("/sessions", params)
         .then(response => {
-          axios.defaults.headers.common["authorization"] =
+          axios.defaults.headers.common.authentication =
             response.data.token;
           localStorage.setItem("jwt", response.data.token);
           localStorage.setItem("user_id", response.data.user_id);

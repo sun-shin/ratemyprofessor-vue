@@ -122,12 +122,18 @@ export default {
       axios
         .post("/professors", params)
         .then((response) => {
-          this.$refs['modal'].hide()
-          location.reload();
+          location.reload()
+          this.$refs['modal'].hide();
+          this.clearForm();
         })
         .catch((error) => {
           this.error = error.response.data.errors;
         });
+    },
+    clearForm: function() {
+      this.name =  ""
+      this.university =  ""
+      this.department =  ""
     },
     avgRating: function(reviews) {
       var sum = 0;
@@ -141,6 +147,6 @@ export default {
       var result = avg + "/5.0";
       return result;
     },
-  },
+  }
 };
 </script>

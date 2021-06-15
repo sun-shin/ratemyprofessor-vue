@@ -5,7 +5,10 @@ import axios from "axios";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
-
+const token = localStorage.getItem("jwt")
+if(token) {
+  axios.defaults.headers.common.authentication = token;
+}
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue)

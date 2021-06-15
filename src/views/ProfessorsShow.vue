@@ -210,6 +210,12 @@ export default {
     formatDate: function(date) {
       return moment(date).format("LLL");
     },
+    clearForm: function() {
+      this.title =  ""
+      this.courseCode =  ""
+      this.review =  ""
+      this.rating =  ""
+    },
     avgRating: function(reviews) {
       var sum = 0;
       for (var i = 0; i < reviews.length; i++) {
@@ -231,10 +237,12 @@ export default {
         rating: this.rating,
       };
       axios
-        .post(`/professors/${this.professor.id}/review-new`, params)
+        .post("/reviews", params)
         .then((response) => {
           this.$refs['review-new-modal'].hide()
-          location.reload();
+          const reviews = [...this.professor.reviews, response.data];
+          this.professor.reviews = reviews;
+          this.clearForm() 
         })
         .catch((error) => {
           this.error = error.response.data.errors;
