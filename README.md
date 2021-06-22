@@ -1,4 +1,4 @@
-# ratemyprofessor-frontend
+# ratemyprofessor
 
 ## Project setup
 ```

@@ -30,14 +30,14 @@ h3 {
   border-radius: 30px;
   padding: 8px;
   margin: 20px;
-  position: absolute;
-  top: 450px;
+  position: relative;
+  top: 200px;
   left: 450px;
 }
 .index-button:hover {
   background: rgb(44, 44, 44);
-  position: absolute;
-  top: 450px;
+  position: relative;
+  top: 200px;
 }
 .new-button {
   color: white;
@@ -48,14 +48,14 @@ h3 {
   border-radius: 30px;
   padding: 8px;
   margin: 20px;
-  position: absolute;
-  top: 450px;
+  position: relative;
+  top: 200px;
   right: 400px;
 }
 .new-button:hover {
   background: rgb(44, 44, 44);
-  position: absolute;
-  top: 450px;
+  position: relative;
+  top: 200px;
 }
 </style>
 
