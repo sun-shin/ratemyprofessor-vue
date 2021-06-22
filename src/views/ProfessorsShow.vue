@@ -142,7 +142,6 @@
 }
 a {
   font-weight: bold;
-  color: #fff
 }
 #reviewtxtarea {
   width: 450px;
